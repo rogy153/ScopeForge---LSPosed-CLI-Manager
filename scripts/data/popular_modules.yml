@@ -1,0 +1,414 @@
+# Banco de dados de módulos populares do LSPosed
+# Contém informações sobre módulos conhecidos, suas descrições e configurações
+
+popular_modules:
+  
+  # ===== FRAMEWORKS E BASES =====
+  io.github.lsposed.manager:
+    name: "LSPosed Manager"
+    description: "Interface oficial do LSPosed para gerenciar módulos"
+    category: "framework"
+    compatibility:
+      android_min: 21
+      android_max: 34
+    tags: ["essential", "manager", "core"]
+    risk_level: "low"
+    recommended_scopes:
+      - com.android.systemui
+      - android
+    download_url: "https://github.com/LSPosed/LSPosed/releases"
+    
+  de.robv.android.xposed.installer:
+    name: "Xposed Installer (Legacy)"
+    description: "Instalador clássico do Xposed (compatibilidade legacy)"
+    category: "framework"
+    compatibility:
+      android_min: 16
+      android_max: 28
+    tags: ["legacy", "installer"]
+    risk_level: "low"
+    notes: "Apenas para compatibilidade. Use LSPosed Manager para versões recentes"
+    
+  com.github.kyuubiran.ezxhelper:
+    name: "EzXHelper"
+    description: "Framework para desenvolvimento de módulos Xposed"
+    category: "framework"
+    compatibility:
+      android_min: 21
+      android_max: 34
+    tags: ["development", "helper", "framework"]
+    risk_level: "low"
+    
+  # ===== GRAVITYBOX SERIES =====
+  com.ceco.pie.gravitybox:
+    name: "GravityBox [P]"
+    description: "Customização completa do Android Pie"
+    category: "customization"
+    compatibility:
+      android_min: 28
+      android_max: 28
+    tags: ["customization", "ui", "system", "popular"]
+    risk_level: "medium"
+    recommended_scopes:
+      - com.android.systemui
+      - android
+      - com.android.settings
+      - com.android.phone
+    features:
+      - "StatusBar customization"
+      - "Navigation tweaks"
+      - "Lock screen mods"
+      - "Power menu changes"
+    download_url: "https://repo.xposed.info/module/com.ceco.pie.gravitybox"
+    
+  com.ceco.q.gravitybox:
+    name: "GravityBox [Q]"
+    description: "Customização completa do Android 10"
+    category: "customization"
+    compatibility:
+      android_min: 29
+      android_max: 29
+    tags: ["customization", "ui", "system", "popular"]
+    risk_level: "medium"
+    recommended_scopes:
+      - com.android.systemui
+      - android
+      - com.android.settings
+      - com.android.phone
+      
+  com.ceco.r.gravitybox:
+    name: "GravityBox [R]"
+    description: "Customização completa do Android 11"
+    category: "customization"
+    compatibility:
+      android_min: 30
+      android_max: 30
+    tags: ["customization", "ui", "system", "popular"]
+    risk_level: "medium"
+    
+  # ===== INTERFACE E CUSTOMIZAÇÃO =====
+  tk.wasdennnoch.androidn_ify:
+    name: "Android N-ify"
+    description: "Porta recursos do Android N para versões anteriores"
+    category: "customization"
+    compatibility:
+      android_min: 16
+      android_max: 27
+    tags: ["ui", "backport", "notifications"]
+    risk_level: "low"
+    recommended_scopes:
+      - com.android.systemui
+      - android
+      - com.android.settings
+      
+  com.zacharee1.systemuituner:
+    name: "SystemUI Tuner"
+    description: "Ajustes avançados da interface do sistema"
+    category: "customization"
+    compatibility:
+      android_min: 21
+      android_max: 34
+    tags: ["ui", "systemui", "tuner"]
+    risk_level: "low"
+    recommended_scopes:
+      - com.android.systemui
+      - com.android.settings
+      
+  # ===== PRIVACIDADE E SEGURANÇA =====
+  com.oasisfeng.greenify:
+    name: "Greenify"
+    description: "Hibernação automática de apps para economia de bateria"
+    category: "battery"
+    compatibility:
+      android_min: 16
+      android_max: 34
+    tags: ["battery", "performance", "hibernation", "popular"]
+    risk_level: "low"
+    recommended_scopes:
+      - com.android.settings
+      - com.android.systemui
+    features:
+      - "Auto hibernation"
+      - "Doze optimization"
+      - "Aggressive Doze"
+    download_url: "https://play.google.com/store/apps/details?id=com.oasisfeng.greenify"
+    
+  de.robv.android.xposed.mods.appsettings:
+    name: "App Settings"
+    description: "Configurações por aplicativo (DPI, permissões, etc.)"
+    category: "tweaks"
+    compatibility:
+      android_min: 16
+      android_max: 30
+    tags: ["apps", "settings", "dpi", "permissions"]
+    risk_level: "medium"
+    recommended_scopes:
+      - "*"  # Pode afetar qualquer app
+    notes: "Use com cuidado - pode afetar qualquer aplicativo"
+    
+  # ===== REDES SOCIAIS =====
+  io.github.qauxv:
+    name: "QAuxiliary"
+    description: "Enhancements para QQ e aplicativos Tencent"
+    category: "social"
+    compatibility:
+      android_min: 21
+      android_max: 34
+    tags: ["qq", "tencent", "social", "chinese"]
+    risk_level: "medium"
+    recommended_scopes:
+      - com.tencent.mobileqq
+      - com.tencent.tim
+      - com.tencent.mm
+    region: "CN"
+    
+  # ===== SISTEMA E PERFORMANCE =====
+  me.weishu.kernelsu:
+    name: "KernelSU Module Support"
+    description: "Suporte para módulos KernelSU via Xposed"
+    category: "system"
+    compatibility:
+      android_min: 28
+      android_max: 34
+    tags: ["kernelsu", "modules", "root"]
+    risk_level: "high"
+    recommended_scopes:
+      - com.android.systemui
+      - android
+    notes: "Requer kernel compatível com KernelSU"
+    
+  com.github.tornaco.android.thanos:
+    name: "Thanox"
+    description: "Gerenciamento avançado de aplicativos e sistema"
+    category: "system"
+    compatibility:
+      android_min: 21
+      android_max: 34
+    tags: ["management", "system", "advanced"]
+    risk_level: "medium"
+    recommended_scopes:
+      - com.android.systemui
+      - com.android.settings
+      - android
+      
+  # ===== LAUNCHERS =====
+  com.google.android.apps.nexuslauncher.mods:
+    name: "Pixel Launcher Mods"
+    description: "Modificações para o Pixel Launcher"
+    category: "launcher"
+    compatibility:
+      android_min: 26
+      android_max: 34
+    tags: ["launcher", "pixel", "google"]
+    risk_level: "low"
+    recommended_scopes:
+      - com.google.android.apps.nexuslauncher
+      - com.android.systemui
+      
+  # ===== CÂMERA =====
+  com.google.android.GoogleCamera.mods:
+    name: "Google Camera Mods"
+    description: "Modificações para Google Camera (GCam)"
+    category: "camera"
+    compatibility:
+      android_min: 23
+      android_max: 34
+    tags: ["camera", "gcam", "photography"]
+    risk_level: "low"
+    recommended_scopes:
+      - com.google.android.GoogleCamera
+    variants:
+      - "GCam Mod by BSG"
+      - "GCam Port by Urnyx"
+      - "Parrot Mod"
+      
+  # ===== NFC E CONECTIVIDADE =====
+  de.tu_darmstadt.seemoo.nfcgate:
+    name: "NFCGate"
+    description: "Análise e relay de comunicações NFC"
+    category: "security"
+    compatibility:
+      android_min: 21
+      android_max: 34
+    tags: ["nfc", "security", "analysis", "research"]
+    risk_level: "medium"
+    recommended_scopes:
+      - com.android.nfc
+      - com.android.systemui
+      - com.android.settings
+    features:
+      - "NFC relay attacks"
+      - "Protocol analysis"
+      - "Tag emulation"
+    download_url: "https://github.com/nfcgate/nfcgate"
+    notes: "Para pesquisa em segurança NFC"
+    
+  # ===== VENDOR ESPECÍFICOS =====
+  
+  # Samsung
+  com.samsung.android.mods.oneui:
+    name: "OneUI Mods"
+    description: "Modificações para Samsung OneUI"
+    category: "vendor"
+    vendor: "samsung"
+    compatibility:
+      android_min: 28
+      android_max: 34
+    tags: ["samsung", "oneui", "vendor"]
+    risk_level: "medium"
+    recommended_scopes:
+      - com.samsung.android.systemui
+      - com.android.systemui
+      - com.sec.android.app.launcher
+      
+  # Xiaomi
+  com.miui.mods.system:
+    name: "MIUI System Mods"
+    description: "Modificações para MIUI"
+    category: "vendor"
+    vendor: "xiaomi"
+    compatibility:
+      android_min: 21
+      android_max: 34
+    tags: ["miui", "xiaomi", "vendor"]
+    risk_level: "medium"
+    recommended_scopes:
+      - com.miui.home
+      - com.android.systemui
+      - com.miui.securitycenter
+      
+  # ===== DESENVOLVIMENTO E DEBUG =====
+  de.robv.android.xposed.mods.tutorial:
+    name: "Xposed Tutorial"
+    description: "Módulo tutorial para desenvolvimento Xposed"
+    category: "development"
+    compatibility:
+      android_min: 16
+      android_max: 34
+    tags: ["tutorial", "development", "learning"]
+    risk_level: "low"
+    recommended_scopes:
+      - com.android.systemui
+    notes: "Apenas para aprendizado"
+    
+  com.github.uiautomator.mods:
+    name: "UI Automator Enhancements"
+    description: "Melhorias para automação de UI"
+    category: "automation"
+    compatibility:
+      android_min: 18
+      android_max: 34
+    tags: ["automation", "ui", "testing"]
+    risk_level: "low"
+    recommended_scopes:
+      - com.android.systemui
+      - android
+      
+  # ===== JOGOS =====
+  com.github.gameguardian.xposed:
+    name: "GameGuardian Xposed"
+    description: "Modificações em jogos via Xposed"
+    category: "games"
+    compatibility:
+      android_min: 16
+      android_max: 34
+    tags: ["games", "cheats", "modification"]
+    risk_level: "high"
+    recommended_scopes:
+      - "*"  # Pode afetar qualquer jogo
+    notes: "Pode violar ToS de jogos online"
+    
+  # ===== ACESSIBILIDADE =====
+  com.android.accessibility.mods:
+    name: "Accessibility Enhancements"
+    description: "Melhorias de acessibilidade"
+    category: "accessibility"
+    compatibility:
+      android_min: 21
+      android_max: 34
+    tags: ["accessibility", "a11y", "inclusive"]
+    risk_level: "low"
+    recommended_scopes:
+      - com.android.settings
+      - com.android.systemui
+      - android
+
+# Categorias disponíveis
+categories:
+  framework: "Frameworks e bases do sistema"
+  customization: "Customização de interface"
+  system: "Sistema e performance"
+  privacy: "Privacidade e segurança"
+  social: "Redes sociais"
+  launcher: "Launchers"
+  camera: "Câmera e fotografia"
+  battery: "Bateria e energia"
+  vendor: "Específicos de fabricante"
+  development: "Desenvolvimento e debug"
+  games: "Jogos e entretenimento"
+  accessibility: "Acessibilidade"
+  security: "Segurança e pesquisa"
+  automation: "Automação"
+  tweaks: "Ajustes diversos"
+
+# Níveis de risco
+risk_levels:
+  low: "Baixo risco - modificações menores"
+  medium: "Médio risco - pode afetar estabilidade"
+  high: "Alto risco - modificações profundas do sistema"
+  experimental: "Experimental - use com extrema cautela"
+
+# Tags disponíveis
+available_tags:
+  - popular
+  - essential
+  - ui
+  - system
+  - battery
+  - performance
+  - customization
+  - security
+  - privacy
+  - social
+  - games
+  - camera
+  - launcher
+  - vendor
+  - development
+  - legacy
+  - experimental
+  - chinese
+  - research
+
+# Configurações de descoberta automática
+auto_discovery:
+  enabled: true
+  update_frequency: "weekly"
+  sources:
+    - "https://repo.xposed.info/"
+    - "https://github.com/topics/xposed-module"
+    - "https://github.com/topics/lsposed"
+  
+# Configurações de compatibilidade
+compatibility_check:
+  strict_mode: false
+  warn_unsupported: true
+  auto_suggest_alternatives: true
+
+# Configurações de recomendação
+recommendations:
+  max_suggestions: 10
+  weight_factors:
+    popularity: 0.3
+    compatibility: 0.4
+    risk_level: 0.2
+    user_rating: 0.1
+  
+  essential_modules:
+    - io.github.lsposed.manager
+    - com.github.kyuubiran.ezxhelper
+    
+  beginner_friendly:
+    - tk.wasdennnoch.androidn_ify
+    - com.zacharee1.systemuituner
+    - com.oasisfeng.greenify

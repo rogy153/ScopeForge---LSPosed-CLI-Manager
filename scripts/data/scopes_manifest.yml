@@ -1,0 +1,306 @@
+# Manifesto de escopos para módulos LSPosed
+# Versão expandida com módulos populares
+
+modules:
+  # ===== MÓDULOS NFC =====
+  de.tu_darmstadt.seemoo.nfcgate:
+    description: "NFCGate - NFC relay and analysis"
+    defaults:
+      - com.android.nfc
+    patterns:
+      - "nfc"
+      - '^com\.android\.systemui$'
+      - '^com\.android\.settings$'
+
+  # ===== INTERFACE E SISTEMA =====
+  com.github.kyuubiran.ezxhelper:
+    description: "EzXHelper - Xposed development framework"
+    defaults:
+      - com.android.systemui
+    patterns:
+      - '^com\.android\.systemui$'
+      - "^android$"
+
+  de.robv.android.xposed.installer:
+    description: "Xposed Installer clássico"
+    defaults:
+      - com.android.systemui
+      - android
+    patterns:
+      - '^com\.android\.(systemui|settings)$'
+
+  # ===== GRAVITYBOX =====
+  com.ceco.nougat.gravitybox:
+    description: "GravityBox Nougat"
+    defaults:
+      - com.android.systemui
+      - android
+      - com.android.settings
+    patterns:
+      - '^com\.android\.(systemui|phone|settings)$'
+      - "^android$"
+
+  com.ceco.oreo.gravitybox:
+    description: "GravityBox Oreo"
+    defaults:
+      - com.android.systemui
+      - android
+      - com.android.settings
+    patterns:
+      - '^com\.android\.(systemui|phone|settings)$'
+      - "^android$"
+
+  com.ceco.pie.gravitybox:
+    description: "GravityBox Pie"
+    defaults:
+      - com.android.systemui
+      - android
+      - com.android.settings
+    patterns:
+      - '^com\.android\.(systemui|phone|settings)$'
+      - "^android$"
+
+  com.ceco.q.gravitybox:
+    description: "GravityBox Q"
+    defaults:
+      - com.android.systemui
+      - android
+      - com.android.settings
+    patterns:
+      - '^com\.android\.(systemui|phone|settings)$'
+      - "^android$"
+
+  # ===== PRIVACIDADE E SEGURANÇA =====
+  com.oasisfeng.greenify:
+    description: "Greenify - App hibernation"
+    patterns:
+      - '^com\.android\.settings$'
+      - '^com\.android\.systemui$'
+      - ".*launcher.*"
+
+  de.robv.android.xposed.mods.appsettings:
+    description: "App Settings - Per-app configurations"
+    patterns:
+      - ".*" # Pode afetar qualquer app
+
+  io.github.lsposed.manager:
+    description: "LSPosed Manager"
+    defaults:
+      - com.android.systemui
+      - android
+    patterns:
+      - '^com\.android\.(systemui|settings)$'
+      - "^android$"
+
+  # ===== MÓDULOS DE HOOK ESPECÍFICOS =====
+  com.github.w2sv.filenavigator:
+    description: "File Navigator enhancements"
+    patterns:
+      - '^com\.android\.documentsui$'
+      - '^com\.android\.externalstorage$'
+
+  com.android.vending.billing.InAppBillingService.LOCK:
+    description: "Lucky Patcher alternative"
+    patterns:
+      - '^com\.android\.vending$'
+      - '^com\.google\.android\.gms$'
+      - '^com\.google\.android\.gsf$'
+
+  # ===== CUSTOMIZAÇÃO DE INTERFACE =====
+  tk.wasdennnoch.androidn_ify:
+    description: "Android N-ify"
+    defaults:
+      - com.android.systemui
+      - android
+    patterns:
+      - '^com\.android\.(systemui|settings)$'
+      - "^android$"
+
+  com.zacharee1.systemuituner:
+    description: "SystemUI Tuner"
+    defaults:
+      - com.android.systemui
+    patterns:
+      - '^com\.android\.systemui$'
+      - '^com\.android\.settings$'
+
+  # ===== DESENVOLVIMENTO =====
+  io.github.qauxv:
+    description: "QAuxiliary - QQ/TIM enhancement"
+    defaults:
+      - com.tencent.mobileqq
+      - com.tencent.tim
+    patterns:
+      - '^com\.tencent\.(mobileqq|tim)$'
+
+  de.robv.android.xposed.mods.tutorial:
+    description: "Xposed Tutorial"
+    defaults:
+      - com.android.systemui
+    patterns:
+      - '^com\.android\.systemui$'
+
+  # ===== REDES SOCIAIS =====
+  me.weishu.kernelsu:
+    description: "KernelSU module support"
+    patterns:
+      - '^com\.android\.systemui$'
+      - "^android$"
+
+  com.github.tornaco.android.thanos:
+    description: "Thanox - Advanced app management"
+    patterns:
+      - '^com\.android\.(systemui|settings)$'
+      - "^android$"
+
+  # ===== LAUNCHERS =====
+  com.google.android.apps.nexuslauncher:
+    description: "Pixel Launcher modifications"
+    defaults:
+      - com.google.android.apps.nexuslauncher
+    patterns:
+      - '^com\.google\.android\.apps\.nexuslauncher$'
+      - '^com\.android\.systemui$'
+
+  com.android.launcher3:
+    description: "AOSP Launcher modifications"
+    defaults:
+      - com.android.launcher3
+    patterns:
+      - '^com\.android\.launcher3$'
+      - '^com\.android\.systemui$'
+
+  # ===== CÂMERA =====
+  com.google.android.GoogleCamera:
+    description: "Google Camera modifications"
+    defaults:
+      - com.google.android.GoogleCamera
+    patterns:
+      - '^com\.google\.android\.GoogleCamera$'
+      - "camera"
+
+  com.android.camera2:
+    description: "AOSP Camera modifications"
+    defaults:
+      - com.android.camera2
+    patterns:
+      - '^com\.android\.camera2?$'
+      - "camera"
+
+  # ===== VENDOR ESPECÍFICOS =====
+
+  # Samsung
+  com.samsung.android.oneui:
+    description: "Samsung OneUI modifications"
+    patterns:
+      - '^com\.samsung\.android\.'
+      - '^com\.sec\.'
+      - '^com\.android\.systemui$'
+
+  # Xiaomi/MIUI
+  com.miui.system:
+    description: "MIUI system modifications"
+    patterns:
+      - '^com\.miui\.'
+      - '^com\.xiaomi\.'
+      - '^com\.android\.systemui$'
+
+  # Huawei/EMUI
+  com.huawei.systemmanager:
+    description: "EMUI system modifications"
+    patterns:
+      - '^com\.huawei\.'
+      - '^com\.hihonor\.'
+      - '^com\.android\.systemui$'
+
+  # OnePlus/OxygenOS
+  com.oneplus.security:
+    description: "OxygenOS modifications"
+    patterns:
+      - '^com\.oneplus\.'
+      - '^com\.oppo\.'
+      - '^com\.android\.systemui$'
+
+  # ===== FRAMEWORKS E BIBLIOTECAS =====
+  de.robv.android.xposed.bridge:
+    description: "Xposed Bridge"
+    defaults:
+      - android
+    patterns:
+      - "^android$"
+      - '^com\.android\.systemui$'
+
+  com.github.libxposed:
+    description: "LibXposed Framework"
+    defaults:
+      - android
+    patterns:
+      - "^android$"
+      - '^com\.android\.systemui$'
+
+  # ===== JOGOS E ENTRETENIMENTO =====
+  com.github.uiautomator:
+    description: "UI Automator enhancements"
+    patterns:
+      - "game"
+      - 'play\.games'
+      - '^com\.android\.systemui$'
+
+  # ===== MÓDULOS DE SISTEMA =====
+  com.android.phone.enhanced:
+    description: "Phone app enhancements"
+    defaults:
+      - com.android.phone
+      - com.android.dialer
+    patterns:
+      - '^com\.android\.(phone|dialer)$'
+      - '^com\.android\.systemui$'
+
+  com.android.contacts.enhanced:
+    description: "Contacts app enhancements"
+    defaults:
+      - com.android.contacts
+    patterns:
+      - '^com\.android\.contacts$'
+      - '^com\.android\.systemui$'
+
+  # ===== ACESSIBILIDADE =====
+  com.android.accessibility.enhanced:
+    description: "Accessibility enhancements"
+    patterns:
+      - '^com\.android\.settings$'
+      - '^com\.android\.systemui$'
+      - "accessibility"
+
+  # ===== GENÉRICOS =====
+  "*":
+    description: "Padrão para módulos não listados"
+    patterns:
+      - '^com\.android\.systemui$'
+      - "^android$"
+
+# Configurações globais
+settings:
+  cache_duration: 3600 # 1 hora
+  max_suggestions: 20
+  auto_backup: true
+  default_user_id: 0
+
+  # Padrões por categoria de app
+  category_defaults:
+    system:
+      - com.android.systemui
+      - android
+    google:
+      - com.android.systemui
+      - com.google.android.gms
+    vendor:
+      - com.android.systemui
+    launcher:
+      - com.android.systemui
+    camera:
+      - com.android.systemui
+    social:
+      - com.android.systemui
+    games:
+      - com.android.systemui
